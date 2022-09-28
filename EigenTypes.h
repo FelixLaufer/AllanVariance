@@ -5,7 +5,6 @@
 #include <Eigen/Geometry>
 #include <complex>
 
-
 typedef double ScalarType;
 typedef std::complex<ScalarType> ScalarTypeC;
 
@@ -29,9 +28,5 @@ typedef Eigen::Matrix<ScalarType, Eigen::Dynamic, Eigen::Dynamic> Matrix;
 typedef Eigen::Matrix<ScalarTypeC, Eigen::Dynamic, Eigen::Dynamic> MatrixC;
 typedef Eigen::Matrix<ScalarType, Eigen::Dynamic, 1> Vector;
 typedef Eigen::Matrix<ScalarTypeC, Eigen::Dynamic, 1> VectorC;
-
-typedef Eigen::AngleAxis<ScalarType> AngleAxis;
-typedef Eigen::Quaternion<ScalarType> Quaternion;
-
 
 #endif
