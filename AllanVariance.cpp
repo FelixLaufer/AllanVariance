@@ -34,7 +34,7 @@ AllanVariance::Allan AllanVariance::compute(const Vector& data, const ScalarType
   theta *= dt;
 
   Vector avar = Vector::Zero(avrFcts.size());
-  #pragma omp parallel for
+  #pragma omp parallel for default(shared) 
   for (int i = 0; i < avrFcts.size(); ++i)
     avar(i) = (theta.segment(2 * avrFcts(i), len - 2 * avrFcts(i)) - 2 * theta.segment(avrFcts(i), len - 2 * avrFcts(i)) + theta.segment(0, len - 2 * avrFcts(i))).array().pow(2).sum();
   avar.array() = avar.array().cwiseQuotient(2 * tau.array().pow(2) * ((Vector::Ones(avrFcts.size()).array() * len) - 2 * avrFcts.array()));
