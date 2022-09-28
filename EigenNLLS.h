@@ -1,8 +1,8 @@
 #ifndef _NLLS_H_
 #define _NLLS_H_
 
-#include <unsupported/Eigen/NonLinearOptimization>
 #include "EigenTypes.h"
+#include <unsupported/Eigen/NonLinearOptimization>
 
 template<int NX = Eigen::Dynamic, int NY = Eigen::Dynamic>
 class NLLSObject
