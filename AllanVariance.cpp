@@ -1,6 +1,6 @@
 ﻿#include "AllanVariance.h"
 
-#include "math/Constants.h"
+#include "Constants.h"
 
 #include <numeric>
 #include <vector>
