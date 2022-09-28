@@ -1,8 +1,8 @@
 #ifndef _ALLAN_VARIANCE_H_
 #define _ALLAN_VARIANCE_H_
 
-#include "math/EigenTypes.h"
-#include "math/optim/EigenNLLS.h"
+#include "EigenTypes.h"
+#include "EigenNLLS.h"
 
 #include <sstream>
 
