@@ -1,4 +1,4 @@
-# AllanVariance
+# Allan variance
 Allan variance and noise analysis for computing common noise coefficients of a time-series such as
  - quantization error
  - random walk
