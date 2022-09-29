@@ -12,7 +12,7 @@ based on
 
 and
 
-- b) a regression approach as introduced in the paper "A regression-based methodology to improve estimation of inertial sensor errors using Allan variance data" by Jurado et al. (https://www.researchgate.net/publication/330514910_A_regression-based_methodology_to_improve_estimation_of_inertial_sensor_errors_using_Allan_variance_data)
+- b) a regression approach introduced in ["A regression-based methodology to improve estimation of inertial sensor errors using Allan variance data" by Jurado et al.]([https://www.google.com](https://www.researchgate.net/publication/330514910_A_regression-based_methodology_to_improve_estimation_of_inertial_sensor_errors_using_Allan_variance_data))
 
 ## Example
 ```cpp
