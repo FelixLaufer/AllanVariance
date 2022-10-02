@@ -2,7 +2,7 @@
 #define _ALLAN_VARIANCE_H_
 
 #include "EigenTypes.h"
-#include "EigenNLLS.h"
+#include "NLLSFunctor.h"
 
 #include <sstream>
 
@@ -37,7 +37,7 @@ namespace AllanVariance
 
   NoiseAnalysis analyzeSlopeMethod(const Allan& allan);
 
-  struct RegressionFunctor : public NLLSObject<>
+  struct RegressionFunctor : public NLLSFunctor<>
   {
     int operator()(const Vector& x, Vector& fvec) const
     {
