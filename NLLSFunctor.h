@@ -41,8 +41,10 @@ class NLLSFunctor
     return values_;
   }
  
-  virtual int operator() (const InputType& x, ValueType& v) const = 0;
-
+  virtual int operator() (const InputType& x, ValueType& fvec) const = 0;
+  virtual int df(const InputType& x, JacobianType& fjac) const
+  {};
+ 
  protected:
   const unsigned int inputs_, values_;
 };
