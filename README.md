@@ -8,7 +8,7 @@ Allan variance and noise analysis for computing common noise coefficients of tim
 
 The noise analysis uses either:
 - a) the common slope method
-- b) a regression-based approach introduced in ["A regression-based methodology to improve estimation of inertial sensor errors using Allan variance data" by Jurado et al.](https://www.researchgate.net/publication/330514910_A_regression-based_methodology_to_improve_estimation_of_inertial_sensor_errors_using_Allan_variance_data), c.f. Matlab implementation: https://www.mathworks.com/matlabcentral/fileexchange/66462-autonomous-regression-method-for-allan-variance
+- b) a regression-based approach introduced in ["A regression-based methodology to improve estimation of inertial sensor errors using Allan variance data" by Jurado et al.](https://www.researchgate.net/publication/330514910_A_regression-based_methodology_to_improve_estimation_of_inertial_sensor_errors_using_Allan_variance_data), [Matlab implementation](https://www.mathworks.com/matlabcentral/fileexchange/66462-autonomous-regression-method-for-allan-variance)
 
 ## Example
 ```cpp
