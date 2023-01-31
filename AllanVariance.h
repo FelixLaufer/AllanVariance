@@ -39,14 +39,15 @@ namespace AllanVariance
 
   struct RegressionFunctor : public NLLSFunctor<>
   {
+    RegressionFunctor(const size_t size)
+      : NLLSFunctor<>(5, size)
+    {}
+  
     int operator()(const Vector& x, Vector& fvec) const
     {
       fvec = y.array() - (X * x.cwiseAbs2()).array().log10();
       return 0;
     }
-
-    unsigned int inputs() const { return 5; };
-    unsigned int values() const { return 1; };
 
     Matrix X;
     Vector y;
