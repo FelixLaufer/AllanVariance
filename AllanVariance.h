@@ -45,7 +45,7 @@ namespace AllanVariance
       , y_(y)
     {}
   
-    int operator()(const Vector& x, Vector& fvec) const
+    int operator()(const Vector& x, Vector& fvec) const override
     {
       fvec = y_.array() - (X_ * x.cwiseAbs2()).array().log10();
       return 0;
