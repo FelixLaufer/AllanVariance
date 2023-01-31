@@ -3,6 +3,7 @@
 
 #include "EigenTypes.h"
 #include <unsupported/Eigen/NonLinearOptimization>
+#include <unsupported/Eigen/NumericalDiff>
 
 template<int NX = Eigen::Dynamic, int NY = Eigen::Dynamic>
 class NLLSFunctor
