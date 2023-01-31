@@ -24,7 +24,7 @@ class NLLSFunctor
     : inputs_(InputsAtCompileTime), values_(ValuesAtCompileTime)
   {}
  
-  NLLSFunctor(unsigned int inputs, unsigned int values)
+  NLLSFunctor(const unsigned int inputs, const unsigned int values)
     : inputs_(inputs)
     , values_(values)
   {}
