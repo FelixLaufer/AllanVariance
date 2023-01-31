@@ -95,10 +95,8 @@ AllanVariance::NoiseAnalysis AllanVariance::analyzeRegressionMethod(const Allan&
   const Vector& x0 = svd.matrixV().leftCols(r) * s.cwiseQuotient((s.array().square() + lambda).matrix()).asDiagonal() * svd.matrixU().transpose().topRows(r) * aDev;
 
   // Get final estimate from non-linear least-squares optimization
-  RegressionFunctorNumDiff func;
   const Matrix& X2 = X;
-  func.X = X2;
-  func.y = aVar.array().log10();
+  RegressionFunctorNumDiff func(X2, aVar.array().log10());
   Eigen::LevenbergMarquardt<RegressionFunctorNumDiff, ScalarType> lm(func);
   Vector x1 = x0;
   const int ret = lm.minimize(x1);
