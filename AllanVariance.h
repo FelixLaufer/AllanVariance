@@ -41,7 +41,7 @@ namespace AllanVariance
   {
     int operator()(const Vector& x, Vector& fvec) const
     {
-      fvec(0) = (y.array() - (X * x.cwiseAbs2()).array().log10()).cwiseAbs2().sum();
+      fvec = y.array() - (X * x.cwiseAbs2()).array().log10();
       return 0;
     }
 
