@@ -39,18 +39,20 @@ namespace AllanVariance
 
   struct RegressionFunctor : public NLLSFunctor<>
   {
-    RegressionFunctor(const size_t size)
-      : NLLSFunctor<>(5, size)
+    RegressionFunctor(const Matrix& X, const Vector& y)
+      : NLLSFunctor<>(X.cols(), y.size())
+      , X_(X)
+      , y_(y)
     {}
   
     int operator()(const Vector& x, Vector& fvec) const
     {
-      fvec = y.array() - (X * x.cwiseAbs2()).array().log10();
+      fvec = y_.array() - (X_ * x.cwiseAbs2()).array().log10();
       return 0;
     }
 
-    Matrix X;
-    Vector y;
+    Matrix X_;
+    Vector y_;
   };
 
   struct RegressionFunctorNumDiff : public Eigen::NumericalDiff<RegressionFunctor> {};
